@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sharans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sharans.each do |sharan| %>
+      <tr>
+        <td><%= sharan.first %></td>
+        <td><%= sharan.last %></td>
+        <td><%= link_to 'Show', sharan %></td>
+        <td><%= link_to 'Edit', edit_sharan_path(sharan) %></td>
+        <td><%= link_to 'Destroy', sharan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sharan', new_sharan_path %>

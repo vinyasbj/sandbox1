@@ -1,0 +1,25 @@
+<%= form_for(@sharan) do |f| %>
+  <% if @sharan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sharan.errors.count, "error") %> prohibited this sharan from being saved:</h2>
+
+      <ul>
+      <% @sharan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first %><br>
+    <%= f.text_area :first %>
+  </div>
+  <div class="field">
+    <%= f.label :last %><br>
+    <%= f.text_area :last %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

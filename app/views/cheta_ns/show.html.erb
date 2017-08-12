@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chetan.name %>
+</p>
+
+<p>
+  <strong>Commit:</strong>
+  <%= @chetan.commit_id %>
+</p>
+
+<%= link_to 'Edit', edit_chetan_path(@chetan) %> |
+<%= link_to 'Back', chetans_path %>
